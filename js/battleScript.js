@@ -5,6 +5,17 @@
 
 //Character Import from Storage
 var characterImport = JSON.parse(sessionStorage.getItem('characterSaved'));
+var characterJob;
+if(sessionStorage.getItem('job')=="warrior"){
+    var character = new Warrior(characterImport.name,characterImport.pronouns);
+    characterJob = "warrior";
+}else if(sessionStorage.getItem('job')=="wizard"){
+    var character = new Wizard(characterImport.name,characterImport.pronouns);
+    characterJob = "wizard";
+}else{
+    var character = new Ranger(characterImport.name,characterImport.pronouns);
+    characterJob = "ranger";
+}//Fin Si
 var character = new Warrior(characterImport.name,characterImport.pronouns);
 //Set the life just in case is has been changed in a battle before 
 //Plus healing number that will change according to the character's life at the finished battle
@@ -13,9 +24,15 @@ character.setLife(characterImport.life+50);
 //Create the Enemy
 var enemy = new Enemy("Exámenes Finales");
 
-//Show stats
+//Show stats and character images
 document.getElementById("characterName").textContent = character.getName();
 document.getElementById("characterLife").textContent = "Vida: "+character.getLife();
+var img = document.createElement("img");
+img.src = "/images/"+characterJob+".png";
+var src = document.getElementById("characterImage");
+src.appendChild(img);
+
+
 document.getElementById("enemyName").textContent = enemy.getName();
 document.getElementById("enemyLife").textContent = "Vida: "+enemy.getLife();
 

@@ -5,7 +5,7 @@
 //Index Code
 document.getElementById("formulary").style.display = "none";
 document.getElementById("intro").style.display = "none";
-document.getElementById("story1").style.display = "none";
+document.getElementById("story01").style.display = "none";
 
 //Create music
 /*
@@ -93,19 +93,25 @@ function validation(){
         }//Fin Si
 
         //Create the character using the class
+        var character;
+        var job;
         if(document.getElementById("warrior").checked == true){
-            var character = new Warrior(name, pronouns);
+            character = new Warrior(name, pronouns);
+            job = "warrior";
         }else if(document.getElementById("wizard").checked == true){
-            var character = new Wizard(name, pronouns);
+            character = new Wizard(name, pronouns);
+            job = "wizard";
         }else{
-            var character = new Ranger(name, pronouns);
+            character = new Ranger(name, pronouns);
+            job = "ranger";
         }//Fin Si
 
         //Save the object in Storage
         sessionStorage.setItem('characterSaved',JSON.stringify(character.getJson()));
+        sessionStorage.setItem('job',job);
  
         //Hide form and show story part 1
         document.getElementById("formulary").style.display = "none";
-        document.getElementById("story1").style.display = "block";
+        document.getElementById("story01").style.display = "block";
     }//Fin Si
 }//Fin validation

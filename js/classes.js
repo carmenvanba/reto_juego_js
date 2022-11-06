@@ -2,6 +2,7 @@
 //Warrior character
 function Warrior(name,pronouns){
     //Atributes
+    this.job = "warrior";
     this.name = name;
     this.pronouns = pronouns;
     this.life = 100;
@@ -11,6 +12,9 @@ function Warrior(name,pronouns){
 
     //Methods
     //Getters
+    this.getJob = function() {
+        return this.job;
+    }
     this.getName = function() {
         return this.name;
     }
@@ -49,6 +53,7 @@ function Warrior(name,pronouns){
 //Wizard character
 function Wizard(name,pronouns){
     Warrior.call(this,name,pronouns);
+    this.job = "wizard";
     this.life = 65;
     this.attack = 5;
     this.specialAttack = 35;
@@ -58,6 +63,7 @@ function Wizard(name,pronouns){
 //Ranger character
 function Ranger(name,pronouns){
     Warrior.call(this,name,pronouns);
+    this.job = "ranger";
     this.life = 80;
     this.attack = 7;
     this.specialAttack = 40;

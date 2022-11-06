@@ -7,113 +7,222 @@
     <meta name="author" content="Carmen van-Baumberghen Rodríguez">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/storyStyles.css">
+    <link rel="stylesheet" href="css/gameStyles.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <title>My CV RPGame</title>
 </head>
 
 <body>
     <header>
+        <img class="gameTitle" src="/images/gameTitle.png" alt="Game Title">
     </header>
     <span class="container" id="title">
-        <div class="animate one">
-            <!--<span>r</span><span>o</span><span>ll</span><span>i</span><span>n</span><span>g</span>
-            <span>r</span><span>p</span><span>g</span>
-            <span>g</span><span>a</span><span>m</span><span>e</span>
-            <br>
-            <span>my</span>
-            <span>cv</span>-->
-            <img class="gameTitle" src="/images/gameTitle.png" alt="Game Title">
-            <br>
-            <div class="buttonWrap">
-                <button id="play" onclick = "play()" title="Jugar">Jugar</button>
-            </div>
-            <br>
-            <div class="textMenu">
+            <img class="rol_01" src="/images/rol_01.png" alt="Tableboard rpg game">
+            <div class="textTitle">
                 <p>Una de mis aficicones preferidas es jugar a <b>Dungeons and Dragons.</b></p>
                 <p>Mediante los juegos de rol de mesa creo que se pueden adquirir y desarrollar múltiples habilidades que pueden ser muy útiles para diferentes ámbitos de nuestras vidas.</p>
-                <p>Como creo que es totalmente aplicable también a la vida laboral, he querido desarrollar este sencillo juego para demostrar no solo una de mis pasiones, sino también ofrecer una manera distinta de conocer mi trasfondo formativo.</p>
+                <p>Como creo que es totalmente aplicable también a la vida laboral, he querido desarrollar este sencillo juego para demostrar no solo una de mis pasiones, sino también ofrecer una manera distinta de conocer más sobre mí.</p>
             </div>
+        <div class="buttonWrap">
+            <button id="play" onclick = "play()" title="Jugar">Jugar</button>
         </div>
     </span>
-
-    
-
+<!--Tutorial-->
     <span class="intro" id="intro">
         <span class="storyBox">
-            <div class="centeredText">
-            <h2>Introducción</h2>
-                <p>
-                    A continuación iniciarás una mini aventura en la que tendrás que superar diferentes pruebas.
-                </p>
-                <p>
-                    <h3>Una breve explicación del sistema de batalla:</h3>
-                    Para este mini reto no he querido complicar mucho las cosas y he elegido utilizar un dado de 6
-                    caras para las acciones de combate.<br>
-                    <ul>
-                        <li>1 = Pifia. Solo harás 1 de daño al enemigo.</li>
+			<div class="storyBoxBorder">
+				<div class="storyBoxBackgroundTitle">
+                    <h2>TUTORIAL</h2>
+				</div>
+				<div class="storyBoxBackground">
+                    <p>
+                        A continuación iniciarás una mini aventura en la que tendrás que superar diferentes pruebas.
+                    </p>
+                    <hr>
+                    <p>
+                        <h3>Una breve explicación del sistema de batalla:</h3>
+                        Para este mini reto no he querido complicar mucho las cosas y he elegido utilizar un dado de 6
+                        caras para las acciones de combate.
                         <br>
-                        <li>5 = Ataque Especial. Si sacas un 5 en el dado, podrás hacer uso del ataque especial.
-                            Pero cuidado, no todos los personajes pueden usar el ataque especial el mismo número 
-                            de veces. Por ejemplo, el mago tiene 3 usos. Mientras que el arquero solo 1 y el guerrero 2.
-                        </li>
-                        <br>
-                        <li>6 = Daño Crítico. Si sacas una tirada crítica tu daño se multiplicará por dos.</li>
-                    </ul>
-                </p>
-                <p>
-                    Aparte de lo ya mencionado no hay mucho más que explicar ni decir.
-                    ¡Solo queda desear que disfrutes de la experiencia!
-                </p>
-            </div>
-        </span>
+                        <ul>
+                            <li>1 = Pifia. Solo harás 1 de daño al enemigo.</li>
+                            <br>
+                            <li>5 = Ataque Especial. Si sacas un 5 en el dado, podrás hacer uso del ataque especial.
+                                Pero cuidado, no todos los personajes pueden usar el ataque especial el mismo número 
+                                de veces.
+                            </li>
+                            <br>
+                            <li>6 = Daño Crítico. Si sacas una tirada crítica tu daño se multiplicará por dos.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Aparte de lo ya mencionado no hay mucho más que explicar ni decir.
+                        ¡Solo queda desear que disfrutes de la experiencia!
+                    </p>
+				</div>
+				<br>
+			</div>
+		</span>
         <br>
-        <button class="btn" onclick = "showForm()" title="Siguiente">Siguiente</button>
+        <div class="exposeJobs">
+            <h2>Clases que podrás elegir</h2>
+            <div class="row">
+                <div class="column">
+                    <h2>Warrior</h2>
+                    <img class="jobImages" src="/images/warrior.png" alt="warrior">
+                    <ul>
+                        <li>
+                            <b>Puntos de Vida: </b>100
+                        </li>
+                        <li>
+                            <b>Ataque: </b>10
+                        </li>
+                        <li>
+                            <b>Ataque Especial: </b>25
+                        </li>
+                        <li>
+                            <b>Usos del Ataque Especial: </b>2
+                        </li>
+                    </ul>
+                </div>
+                <div class="column" id="columnCenter">
+                    <h2>Wizard</h2>
+                    <img class="jobImages" src="/images/wizard.png" alt="wizard">
+                    <ul>
+                        <li>
+                            <b>Puntos de Vida: </b>65
+                        </li>
+                        <li>
+                            <b>Ataque: </b>5
+                        </li>
+                        <li>
+                            <b>Ataque Especial: </b>35
+                        </li>
+                        <li>
+                            <b>Usos del Ataque Especial: </b>3
+                        </li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h2>Ranger</h2>
+                    <img class="jobImages" src="/images/ranger.png" alt="ranger">
+                    <ul>
+                        <li>
+                            <b>Puntos de Vida: </b>80
+                        </li>
+                        <li>
+                            <b>Ataque: </b>7
+                        </li>
+                        <li>
+                            <b>Ataque Especial: </b>40
+                        </li>
+                        <li>
+                            <b>Usos del Ataque Especial: </b>1
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button id="nextButton" onclick = "showForm()" title="Siguiente">CONTINUAR</button>
     </span>
     <br>
 
+<!--Character Creation-->
     <span class="formulary" id="formulary">
-        <h2>Crea tu personaje</h2>
-        <form id="form" action="formulario.html">
-            <input class="form_field" type="text" placeholder="Nombre" id="characterName" maxlength="25"
-                required pattern="\D">
-            <span id="errorName" class="error"></span>    
-            <br>
-            <span>Selecciona tus pronombres:</span><br>
-            <input type="radio" id="ella" value="ella" name="characterPronouns">
-                <label for="ella"> Ella</label><br>
-            <input type="radio" id="el" value="el" name="characterPronouns">
-                <label for="el"> Él</label><br>
-            <input type="radio" id="elle" value="elle" name="characterPronouns">
-                <label for="elle"> Elle</label><br>
-            <span id="errorPronouns" class="error"></span>     
-            <br>
-            <span>Elige una Clase</span><br>
-            <input type="radio" id="warrior" value="warrior" name="characterClass">
-                <label for="warrior"> Guerrero</label><br>
-            <input type="radio" id="wizard" value="wizard" name="characterClass">
-                <label for="wizard"> Mago</label><br>
-            <input type="radio" id="ranger" value="ranger" name="characterClass">
-                <label for="ranger"> Arquero</label><br>
-            <span id="errorCharacterClass" class="error"></span>   
-            <br>
-        </form>   
-        <button class="btn" onclick="validation()" title="Enviar Datos">Enviar</button>
+        <div class="storyBoxBorder">
+            <div class="storyBoxBackgroundTitle">
+                <h2>CREA TU PERSONAJE</h2>
+            </div>
+            <div class="storyBoxBackground">
+                <form id="form" action="formulario.html">
+                    <p>
+                        "Tras un un viaje a un continente lejano, la reina <b>Carmen</b> ha regresado a su tierra natal para
+                        continuar con su trabajo."
+                    </p>
+                    <p>    
+                        "Sin embargo, durante el camino ha sido maldecida por un malvado hechicero misterioso.
+                        Los recuerdos de los últimos años de la reina están ahora perdidos y el reino clama por un héroe
+                        que pueda recuperarlos."
+                    </p>
+                    <p>
+                        <b>Podrías ser tú la persona elegida para salvar a su majestad y por ende al reino entero</b>
+                    </p>
+                    <p>
+                        Así pues, ¿quién se presenta a la gesta?
+                    </p>
+                    <br>
+                    <hr>
+                    <span>Nombre:</span><br>
+                    <input class="form_field" type="text" placeholder="Nombre" id="characterName" maxlength="25"
+                        required pattern="\D">
+                    <span id="errorName" class="error"></span>    
+                    <br>
+                    <br>
+                    <span>Selecciona tus pronombres:</span><br>
+                    <input type="radio" id="ella" value="ella" name="characterPronouns">
+                        <label for="ella"> Ella</label><br>
+                    <input type="radio" id="el" value="el" name="characterPronouns">
+                        <label for="el"> Él</label><br>
+                    <input type="radio" id="elle" value="elle" name="characterPronouns">
+                        <label for="elle"> Elle</label><br>
+                    <span id="errorPronouns" class="error"></span>     
+                    <br>
+                    <br>
+                    <span>Elige una Clase</span><br>
+                    <input type="radio" id="warrior" value="warrior" name="characterClass">
+                        <label for="warrior"> Guerrero</label><br>
+                    <input type="radio" id="wizard" value="wizard" name="characterClass">
+                        <label for="wizard"> Mago</label><br>
+                    <input type="radio" id="ranger" value="ranger" name="characterClass">
+                        <label for="ranger"> Arquero</label><br>
+                    <span id="errorCharacterClass" class="error"></span>   
+                    <br>
+                </form>
+            </div>
+        </div>   
+        <br>
+        <button id="nextButton" onclick="validation()" title="Enviar Datos">CONTINUAR</button>
     </span>
 
-    <span class="story1" id="story1">
-        <h2>Elegir camino</h2>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pharetra blandit consectetur. Praesent ligula massa, cursus eu luctus sit amet, 
-        vehicula vel nisl. Proin aliquet rhoncus dolor non rhoncus. Sed tincidunt mauris vitae massa semper, nec luctus augue mollis. Curabitur turpis mauris, 
-        rhoncus nec tempor et, lacinia nec mauris. Aenean sodales egestas augue ac vestibulum. Quisque rutrum iaculis eros ut suscipit. Curabitur pharetra 
-        luctus velit at sollicitudin. Praesent auctor sem vitae euismod volutpat.
-        Ut in pellentesque mi. Maecenas semper, felis non cursus finibus, lorem diam suscipit ex, sit amet luctus diam purus ac elit. Integer ac massa nec 
-        lectus rhoncus efficitur. Duis pharetra lectus id tellus sodales gravida. Praesent porta, mi in pellentesque placerat, velit magna pellentesque 
-        lacus, a ullamcorper nibh mi non mi. Nunc et maximus massa, eget suscipit ligula. Ut velit risus, finibus eget ornare id, pharetra eget tellus. 
-        Phasellus sit amet nisi quam. Suspendisse potenti. Nullam mi eros, mollis eget bibendum ac, pulvinar a lacus. Sed ut libero velit.
-        <br>
-        <button class="btn" onclick = "examBattle()" id="examBattle" title="Examen">Exámenes</button>
-        <button class="btn" onclick = "tfgBattle()" id="tfgBattle" title="TFG">El TFG</button>
+    <span class="story01" id="story01">
+        <span class="storyBox">
+			<div class="storyBoxBorder">
+				<div class="storyBoxBackgroundTitle">
+                    <h2>Los rumores...</h2>
+				</div>
+				<div class="storyBoxBackground">
+                    <p>
+                        "Investigando, los rumores de los bajos fondos del reino te llevan a descubrir la localización
+                        de la base del malvado mago. Se trata de una torre que se alza en el centro de un bosque 
+                        colindante con el reino."
+                    </p>
+                    <p>
+                        "No tardas mucho en llegar y entrar en la torre tampoco parece difícil. Quizás la verdadera prueba
+                        está en su interior."
+                    </p>
+                    <p>
+                        "Traspasando la puerta y caminando un rato por los pasillos encuentras unas escaleras que suben. En 
+                        cuanto llegas a la primera planta te das cuenta de que en efecto, esto no es una torre normal y corriente."
+                    </p>
+                    <p>
+                        "Sientes como si te hubieran envuelto en un sueño y estuvieras presenciando recuerdos pasados e inconexos 
+                        de la reina. Quizás tu trabajo sea ponerlos en orden."
+                    </p>
+                    <p>
+                        "Te concentras y lo primero que llama tu atención son las imágenes de la reina realizando sus estudios universitarios.
+                        Parece que a Carmen disfruta mucho el aprendizaje en <b>Ciencias de la Comunicación</b>. Pero al llegar al último año 
+                        denota cierta confusión. Quiere sorprender a sus evaluadores, pero no sabe muy bién cómo hacerlo. Vas a tener que ayudarla a elegir. "
+                    </p>
+                    <p>
+                        "¿Debería Carmen esforzarse más en sus estudios y sacar muy buena nota en los <b>Exámenes</b> o
+                        tal vez sería mejor realizar un gran trabajo de investigación para su <b>Tesina de Final de Grado</b>"
+                    </p>
+                </div>
+            </div>
+            <br>
+            <h2>Elige un camino</h2>
+        <button class="btn" id="nextButton" onclick = "examBattle()" id="examBattle" title="Examen">EXÁMENES</button>
+        <button class="btn" id="nextButton" onclick = "tfgBattle()" id="tfgBattle" title="TFG">TFG</button>
     </span>
     <br>
 

@@ -14,25 +14,41 @@
 
 <body>
     <header>
-    <h1 class="title">¡Batalla!</h1>
-    
-    <span id="messageContainer">
-        <span id="battleMessage"></span>
-        <button onclick = "closeBattleMessage()" id="closeMessage">Cerrar</button>
-    </span>
-    </header>
+        <span id="messageContainer">
+            <span id="battleMessage"></span>
+            <button onclick = "closeBattleMessage()" id="closeMessage">Cerrar</button>
+        </span>
+    </header>    
+
+
+        <div class="storyBoxBorder">
+            <div class="storyBoxBackgroundTitle">
+                <h2>EXÁMENES</h2>
+            </div>
+            <div class="storyBoxBackground">
+                <p>
+                    "¡Has decidido ir a por todas en el periodo de exámenes finales!"
+                </p>
+                <p>
+                    "Te adentras en la biblioteca y pasas allí una larga temporada. No sabes si son horas, días o semanas.
+                     Estudiar parece ser un paseo. Sin embargo, enfrentarse a la experiencia puede ser toda una batalla que librar."
+                </p>
+            </div>
+        </div>
+  
+
     <div class="top">
         <div class="row">
             <div class="column" style="background-color:#aaa;">
                 <div class="characterName" id="characterName"></div>
                 <div class="characterLife" id="characterLife"></div>
-                <img src="/images/warrior.png" alt="warrior" width="200"></img>
+                <div id="characterImage"></div>
             </div>
             <div class="divisor" style="background-color:#bbb;"></div>
             <div class="column" style="background-color:#bbb;">
                 <div class="enemyName" id="enemyName"></div>
                 <div class="enemyLife" id="enemyLife"></div>
-                <img src="/images/ogre.png" alt="ogre" width="200"></img>
+                <img src="/images/ogre.png" alt="ogre"></img>
             </div>
         </div>
     </div>

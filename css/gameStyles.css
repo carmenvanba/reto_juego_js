@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+/* Color variables */
+:root {
+	--myPurple: #5C37A4;
+	--myPurpleShadow: #3a285e;
+	--myYellow: #FFBD59; 
+	--myYellowShadow: #cf8b26;
+	--myViolet: #9159C8;
+}
+h2{
+	font-family: 'Poppins';
+	text-align: center;
+    font-size: 24px;
+}
+
+/* Error style */
+.error{
+  color: var(--myYellow);
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+	width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px var(--myYellowShadow); 
+	border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: var(--myYellow);
+	border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: var(--myYellowShadow);
+  }
+
+/* Body style */
+body{
+	background: rgb(145,89,200);
+	background: radial-gradient(circle, rgba(145,89,200,1) 0%, rgba(92,55,164,1) 65%, rgba(57,38,93,1) 100%);
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	color: white;
+	word-wrap:break-word;
+	text-align: center;
+}
+.gameTitle{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+}
+.textTitle{
+	opacity: 85%;
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.rol_01{
+	width: 23%;
+}
+.logo{
+	width: 5%;
+	position: absolute;
+	bottom: -1px;
+	right: 16px;
+	font-size: 18px;
+	opacity: 80%;
+}
+
+/* Play button */
+.buttonWrap {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 2%;
+	margin-bottom: 5%;
+  }
+    #play {
+	min-width: 300px;
+	min-height: 60px;
+	font-family: 'Lato';
+	font-size: 22px;
+	text-transform: uppercase;
+	letter-spacing: 1.3px;
+	font-weight: 700;
+	color: white;
+	background: var(--myYellow);
+ 	background: linear-gradient(90deg, var(--myYellow) 0%, var(--myYellowShadow) 100%);
+	border: none;
+	border-radius: 1000px;
+	box-shadow: 12px 12px 24px var(--myYellowShadow);
+	transition: all 0.3s ease-in-out 0s;
+	cursor: pointer;
+	outline: none;
+	position: relative;
+	padding: 10px;
+	}
+  	#play::before {
+  	content: '';
+	border-radius: 1000px;
+	min-width: calc(300px + 12px);
+	min-height: calc(60px + 12px);
+	border: 6px solid var(--myYellow);
+	box-shadow: 0 0 60px var(--myYellowShadow);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: all .3s ease-in-out 0s;
+  }
+    #play:hover, #play:focus {
+	color: var(--myViolet);
+	transform: translateY(-6px);
+  }
+    #play:hover::before, #play:focus::before {
+	opacity: 1;
+  }
+    #play::after {
+	content: '';
+	width: 30px; height: 30px;
+	border-radius: 100%;
+	border: 6px solid var(--myYellow);
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: ring 1.5s infinite;
+  }
+    #play:hover::after, #play:focus::after {
+	animation: none;
+	display: none;
+  }
+  
+  @keyframes ring {
+	0% {
+	  width: 30px;
+	  height: 30px;
+	  opacity: 1;
+	}
+	100% {
+	  width: 300px;
+	  height: 300px;
+	  opacity: 0;
+	}
+  }
+
+/* Tutorial Game */
+.storyBoxBorder{
+    border: solid 1px var(--myYellow);
+    border-left: solid 6px var(--myYellow);
+    border-right: solid 6px var(--myYellow);
+    width:30%;
+	margin: auto;
+    border-radius: 10px;
+}
+.storyBoxBackgroundTitle{
+    background-color: var(--myPurpleShadow);
+    border-bottom:solid 2px var(--myYellow);
+    padding:1px;
+	
+    border-radius: 10px;
+}
+.storyBoxBackground{
+    background-color:var(--myPurpleShadow);
+    height:300px;
+    max-height:50%;
+    overflow:auto;
+    margin:1%;
+    padding:5%;
+    text-align:left;
+    border-radius: 10px;
+}
+
+/* Exposing jobs */
+.exposeJobs{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1%;
+	width: 50%;
+	text-align: left;
+}
+.column {
+	float: left;
+	padding: 10px;
+	width: 30%;
+	background-color: var(--myViolet);
+  }
+  /* Clear floats after the columns */
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+#columnCenter{
+	background-color: var(--myPurple);
+}
+
+ /* Job Images */
+.jobImages{
+	width: 100%;
+}
+
+
+/* Button styles */
+#nextButton {
+    width: 10%;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: white;
+    background: var(--myPurpleShadow);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+	font-family: 'Lato';
+	font-size: 20px;
+}
+#nextButton:before {
+    content: '';
+    background: linear-gradient(60deg, #ffbe32, var(--myYellowShadow), var(--myYellow), #ffda60, #ff69f8, #5900ff, var(--myPurple), var(--myViolet), #cf42fa);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+#nextButton:active {
+    color: white;
+}
+#nextButton:active:after {
+    background: transparent;
+}
+#nextButton:hover:before {
+    opacity: 1;
+}
+#nextButton:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--myPurpleShadow);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
