@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="videogame">
+    <meta name="author" content="Carmen van-Baumberghen Rodríguez">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/battleStyle.css">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <title>Exámenes</title>
+</head>
+
+<body>
+    <header>
+    <h1 class="title">¡Batalla!</h1>
+    
+    <span id="messageContainer">
+        <span id="battleMessage"></span>
+        <button onclick = "closeBattleMessage()" id="closeMessage">Cerrar</button>
+    </span>
+    </header>
+    <div class="top">
+        <div class="row">
+            <div class="column" style="background-color:#aaa;">
+                <div class="characterName" id="characterName"></div>
+                <div class="characterLife" id="characterLife"></div>
+                <img src="/images/warrior.png" alt="warrior" width="200"></img>
+            </div>
+            <div class="divisor" style="background-color:#bbb;"></div>
+            <div class="column" style="background-color:#bbb;">
+                <div class="enemyName" id="enemyName"></div>
+                <div class="enemyLife" id="enemyLife"></div>
+                <img src="/images/ogre.png" alt="ogre" width="200"></img>
+            </div>
+        </div>
+    </div>
+
+        <div class="bottom">
+            <div class="battleMenu">
+                <div class="row">
+                    <div class="column" style="background-color:#bbb;">
+                        <button onclick = "rollDice()" id="rollDice">Tirar Dado</button>
+                        <div class="">
+                            <button onclick = "attack()" id="attack">Atacar</button>
+                        </div>
+                    </div>
+                    <div class="column" style="background-color:#aaa;">
+                        <div class="">
+                            <span class="text" id="text">Tu tirada: </span>
+                            <span class="dado" id="dado"></span>
+                        </div>
+                        <button onclick = "attack()" id="specialAttack">Ataque Especial</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <footer>
+        <img class="logo" src="/images/Imagotipo_Blanco.png" alt="Vanba Coding Imagotipo">
+    </footer>
+
+
+    <!--JS Code-->
+    <script src="/js/classes.js"></script>
+    <script src="/js/battleScript.js"></script>
+</body>
+
+
+</html>

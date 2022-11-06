@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+/* Color variables */
+:root {
+	--myPurple: #5C37A4;
+	--myYellow: #FFBD59; 
+	--myYellowShadow: #cf8b26;
+	--myViolet: #9159C8;
+}
+body{
+  background-image: url(/images/riverMap.jpg);
+  background-size: 100%;
+}
+h1{
+  color: #5C37A4;
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Lato', sans-serif;
+}
+
+/*Battle Messages*/
+#messageContainer{
+  background-color: #5C37A4;
+  width: 100px;
+  height: 100px;
+  color: white;
+}
+#closeMessage{
+  color: #FFBD59;
+}
+
+
+/*Top*/
+/*Center the top*/
+.top {
+  margin: auto;
+  width: 80%;
+  border: 3px solid green;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+  background-color: aqua;
+  float: left;
+  width: 35%;
+  padding: 10px;
+}
+
+/*Bottom*/
+/*Center the bottom */
+.bottom {
+  margin: auto;
+  width: 40%;
+  border: 3px solid green;
+}
+  /* Create two equal columns that floats next to each other */
+  .column {
+    background-color: grey;
+    float: left;
+   /* width: 47.36%; */
+    padding: 10px;
+  }
+  
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/*
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+*/
