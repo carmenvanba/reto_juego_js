@@ -19,6 +19,10 @@ h3{
     font-size: 14sxpx;
 	text-transform: uppercase;
 }
+a{
+	text-decoration: none;
+	color: var(--myYellow);
+}
 
 /* Error style */
 .error{
@@ -218,6 +222,13 @@ body{
 .jobImages{
 	width: 100%;
 }
+/* Story images */
+.innerImage{
+	width: 70%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+  }
 
 
 /* Button styles */
