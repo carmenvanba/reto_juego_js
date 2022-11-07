@@ -7,17 +7,115 @@
     <meta name="author" content="Carmen van-Baumberghen Rodríguez">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/battleStyle.css">
+    <link rel="stylesheet" href="/css/battleStyle.css">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-    <title>Trabajo Fin de Grado</title>
+    <title>My CV RPGame</title>
 </head>
 
 <body>
-    <header>
-    </header>
+    <span id="showBattle">
+        <header>
+            <div class="battleHistory">
+                <h2>Daño enemigo</h2>
+            </div>
+            <span id="battleHistory"></span>
+        </header> 
+
+            <span id="messageContainer">
+                <span id="battleMessage"></span>
+                <br><br>
+                <button onclick = "closeBattleMessage()" id="closeMessage">Cerrar</button>
+            </span>   
+
+
+            <div class="storyBoxBorder">
+                <div class="storyBoxBackgroundTitle">
+                    <h2>Trabajo de Fin de Grado</h2>
+                </div>
+                <div class="storyBoxBackground">
+                    <p>
+                        "¡Has decidido emplearte a fondo en el trabajo de fin de grado!"
+                    </p>
+                    <p>
+                        "Te adentras en la biblioteca y pasas allí una larga temporada. Ves que la reina decide hacer un trabajo de investigación
+                        sobre la representación de Personajes LGBT+ en series de televisión. Un tema que le resulta muy interesante
+                        y del que además conoce mucho."
+                    </p>
+                    <p>
+                        "Adora el trabajo que hace y además aprende muchísimo. Pero llega el momento de maquetarlo para poder
+                        exponerlo. ¡Y el condenado se le resiste! Ves a Carmen maldiciendo con todo tu ser el no lograr poner bien el dichoso índice
+                        en condiciones y decides unirte a ella en una ardua batalla por lograr terminar a tiempo la tesina."
+                    </p>
+                </div>
+            </div>
+    
+
+        <div class="top">
+            <div class="row">
+                <div class="column">
+                    <div class="stats">
+                        <div class="characterName" id="characterName"></div>
+                        <div class="characterLife" id="characterLife"></div>
+                    </div>
+                    <div id="characterImage"></div>
+                </div>
+                <div class="column">
+                    <div class="stats">
+                        <div class="enemyName" id="enemyName"></div>
+                        <div class="enemyLife" id="enemyLife"></div>
+                    </div>
+                    <img src="/images/tfg.png" id="enemyTfg" alt="tfg"></img>
+                </div>
+            </div>
+        </div>
+
+            <div class="bottom">
+                <div class="battleMenu">
+                    <div class="row">
+                        <div class="column">
+                            <div class="">
+                                <button onclick = "rollDice()" id="rollDice" class="battleButton">Tirar Dado</button>
+                            </div>
+                            <div class="">
+                                <button onclick = "attack()" id="attack" class="battleButton">ATACAR</button>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img class="dice hidden" id="dice" src="/images/dice5.png"/>
+                            <button onclick = "attack()" id="specialAttack" class="battleButton">Ataque Especial</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </span>
+
+    <span id="battleVictory">
+        <div class="finalMessage">
+            ¡Has ganado la batalla!
+        </div>
+        <a href="/html/master.html" id="nextButton" title="Siguiente">CONTINUAR</a>
+    </span>
+    <span id="battleLost">
+        <div class="finalMessage">
+            ¡Has perdido la batalla!
+            <br>
+            No lograste salvar las memorias de la reina...
+            <br>
+            Buena suerte la próxima vez.
+        </div>
+        <a href="/html/creditos.html" id="nextButton" title="Siguiente">CONTINUAR</a>
+    </span>
+
+
+    <footer>
+        <img class="logo" src="/images/Imagotipo_Blanco.png" alt="Vanba Coding Imagotipo">
+    </footer>
+
 
     <!--JS Code-->
-    <script src="js/gamescript.js"></script>
+    <script src="/js/classes.js"></script>
+    <script src="/js/battleScript.js"></script>
 </body>
 
 

@@ -3,30 +3,46 @@
 //Videojuego
 
 //Index Code
-document.getElementById("formulary").style.display = "none";
-document.getElementById("intro").style.display = "none";
-document.getElementById("story01").style.display = "none";
-
-//Create music
-/*
-let audioIntro = new Audio('other/i-am-dreaming-or-final-fantasy-menu-kinda-thing-29173.mp3');
-audioIntro.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-}, false);
-
-let audioStory = new Audio('other/rpg-city-8381.mp3');
-audioIntro.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-}, false);
+//Create Music
+//Menu music
+let audioMenu = new Audio('other/i-am-dreaming-or-final-fantasy-menu-kinda-thing-29173.mp3');
+//Intro music
+let audioIntro = new Audio('other/rpg-city-8381.mp3');
+//Story music
+let audioStory = new Audio('other/kingdom-land-115552.mp3');
+//Final music
+let audioFinale = new Audio('/other/eretria-114713.mp3');
 
 
-audioIntro.play();*/
+//Play music
+//Story music
+if(document.getElementById("introMusic") == null && document.getElementById("finale") == null){
+    //Play story music
+    let audioStory2 = new Audio('/other/kingdom-land-115552.mp3');
+    audioStory2.play();
+}//Fin Si
+//Final music
+if(document.getElementById("finale") != null){
+    audioFinale.play();
+}//Fin Si
+
+   
+
+//If exits, hide the elements
+if(document.getElementById("formulary") != null){
+    //Play menu music
+    audioMenu.play();
+    document.getElementById("formulary").style.display = "none";
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("story01").style.display = "none";
+}//Fin Si
+
+
 //Play the game
 function play(){
-    //audioIntro.pause();
-    //audioStory.play();
+    audioMenu.pause();
+    audioIntro.play();
+    //Next info
     document.getElementById("title").style.display = "none";
     document.getElementById("intro").style.display = "block";
 }//Fin play
@@ -41,10 +57,32 @@ function showForm(){
 //Next html options
 function examBattle(){
     window.location.replace("html/examenes.html");
-}//Fin tfgBattle
+}//Fin examBattle
+
 function tfgBattle(){
     window.location.replace("html/tfg.html");
 }//Fin tfgBattle
+
+function tfmBattle(){
+    window.location.replace("tfm.html");
+}//Fin tfgBattle
+
+function retoJsBattle(){
+    window.location.replace("retoJs.html");
+}//Fin tfgBattle
+
+function creditos(){
+    window.location.replace("creditos.html");
+}//Fin tfgBattle
+
+function startAgain(){
+    window.location.replace("/index.html");
+}//Fin tfgBattle
+
+function linkedin(){
+    window.location.replace("https://www.linkedin.com/in/carmen-van-baumberghen-rodr%C3%ADguez-desarrolladora-app-web/");
+}//Fin tfgBattle
+
 
 
 //Validation
@@ -82,6 +120,9 @@ function validation(){
     }//Fin Funcion resetError
 
     if(validated){
+        audioIntro.pause();
+        audioStory.play();
+
         var name = document.getElementById("characterName").value;
         var pronouns;
         if(document.getElementById("ella").checked == true){

@@ -9,72 +9,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/battleStyle.css">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-    <title>Exámenes</title>
+    <title>My CV RPGame</title>
 </head>
 
 <body>
-    <header>
-        <span id="messageContainer">
-            <span id="battleMessage"></span>
-            <button onclick = "closeBattleMessage()" id="closeMessage">Cerrar</button>
-        </span>
-    </header>    
+    <span id="showBattle">
+        <header>
+            <div class="battleHistory">
+                <h2>Daño enemigo</h2>
+            </div>
+            <span id="battleHistory"></span>
+        </header> 
+
+            <span id="messageContainer">
+                <span id="battleMessage"></span>
+                <br><br>
+                <button onclick = "closeBattleMessage()" id="closeMessage">Cerrar</button>
+            </span>   
 
 
-        <div class="storyBoxBorder">
-            <div class="storyBoxBackgroundTitle">
-                <h2>EXÁMENES</h2>
+            <div class="storyBoxBorder">
+                <div class="storyBoxBackgroundTitle">
+                    <h2>EXÁMENES</h2>
+                </div>
+                <div class="storyBoxBackground">
+                    <p>
+                        "¡Has decidido ir a por todas en el periodo de exámenes finales!"
+                    </p>
+                    <p>
+                        "Te adentras en la biblioteca y pasas allí una larga temporada. No sabes si son horas, días o semanas.
+                        Estudiar parece ser un paseo. Sin embargo, enfrentarse a la experiencia puede ser toda una batalla que librar."
+                    </p>
+                </div>
             </div>
-            <div class="storyBoxBackground">
-                <p>
-                    "¡Has decidido ir a por todas en el periodo de exámenes finales!"
-                </p>
-                <p>
-                    "Te adentras en la biblioteca y pasas allí una larga temporada. No sabes si son horas, días o semanas.
-                     Estudiar parece ser un paseo. Sin embargo, enfrentarse a la experiencia puede ser toda una batalla que librar."
-                </p>
-            </div>
-        </div>
-  
+    
 
-    <div class="top">
-        <div class="row">
-            <div class="column" style="background-color:#aaa;">
-                <div class="characterName" id="characterName"></div>
-                <div class="characterLife" id="characterLife"></div>
-                <div id="characterImage"></div>
-            </div>
-            <div class="divisor" style="background-color:#bbb;"></div>
-            <div class="column" style="background-color:#bbb;">
-                <div class="enemyName" id="enemyName"></div>
-                <div class="enemyLife" id="enemyLife"></div>
-                <img src="/images/ogre.png" alt="ogre"></img>
-            </div>
-        </div>
-    </div>
-
-        <div class="bottom">
-            <div class="battleMenu">
-                <div class="row">
-                    <div class="column" style="background-color:#bbb;">
-                        <button onclick = "rollDice()" id="rollDice">Tirar Dado</button>
-                        <div class="">
-                            <button onclick = "attack()" id="attack">Atacar</button>
-                        </div>
+        <div class="top">
+            <div class="row">
+                <div class="column">
+                    <div class="stats">
+                        <div class="characterName" id="characterName"></div>
+                        <div class="characterLife" id="characterLife"></div>
                     </div>
-                    <div class="column" style="background-color:#aaa;">
-                        <div class="">
-                            <span class="text" id="text">Tu tirada: </span>
-                            <span class="dado" id="dado"></span>
-                        </div>
-                        <button onclick = "attack()" id="specialAttack">Ataque Especial</button>
+                    <div id="characterImage"></div>
+                </div>
+                <div class="column">
+                    <div class="stats">
+                        <div class="enemyName" id="enemyName"></div>
+                        <div class="enemyLife" id="enemyLife"></div>
                     </div>
+                    <img src="/images/exams.png" id="enemyExamns" alt="exams"/>
                 </div>
             </div>
         </div>
 
-    </div>
+            <div class="bottom">
+                <div class="battleMenu">
+                    <div class="row">
+                        <div class="column">
+                            <div class="">
+                                <button onclick = "rollDice()" id="rollDice" class="battleButton">Tirar Dado</button>
+                            </div>
+                            <div class="">
+                                <button onclick = "attack()" id="attack" class="battleButton">ATACAR</button>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img class="dice hidden" id="dice" src="/images/dice5.png"/>
+                            <button onclick = "attack()" id="specialAttack" class="battleButton">Ataque Especial</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </span>
 
+    <span id="battleVictory">
+        <div class="finalMessage">
+            ¡Has ganado la batalla!
+        </div>
+        <a href="/html/master.html" id="nextButton" title="Siguiente">CONTINUAR</a>
+    </span>
+    <span id="battleLost">
+        <div class="finalMessage">
+            ¡Has perdido la batalla!
+            <br>
+            No lograste salvar las memorias de la reina...
+            <br>
+            Buena suerte la próxima vez.
+        </div>
+        <a href="/html/creditos.html" id="nextButton" title="Siguiente">CONTINUAR</a>
+    </span>
 
 
     <footer>
