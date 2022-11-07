@@ -11,14 +11,14 @@ let audioIntro = new Audio('other/rpg-city-8381.mp3');
 //Story music
 let audioStory = new Audio('other/kingdom-land-115552.mp3');
 //Final music
-let audioFinale = new Audio('/other/eretria-114713.mp3');
+let audioFinale = new Audio('../other/eretria-114713.mp3');
 
 
 //Play music
 //Story music
 if(document.getElementById("introMusic") == null && document.getElementById("finale") == null){
     //Play story music
-    let audioStory2 = new Audio('/other/kingdom-land-115552.mp3');
+    let audioStory2 = new Audio('../other/kingdom-land-115552.mp3');
     audioStory2.play();
 }//Fin Si
 //Final music
@@ -76,7 +76,7 @@ function creditos(){
 }//Fin tfgBattle
 
 function startAgain(){
-    window.location.replace("/index.html");
+    window.location.replace("../index.html");
 }//Fin tfgBattle
 
 function linkedin(){

@@ -5,10 +5,10 @@
 //Create Music
 //Battle music 
 if(document.getElementById("finalBattle") == null){
-    let audioBattle = new Audio('/other/knights-of-camelot-8038.mp3');
+    let audioBattle = new Audio('../other/knights-of-camelot-8038.mp3');
     audioBattle.play();
 }else{
-    let audioFinalBattle = new Audio('/other/a-song-of-wolves-and-dragons-8034.mp3');
+    let audioFinalBattle = new Audio('../other/a-song-of-wolves-and-dragons-8034.mp3');
     audioFinalBattle.play();
 }//Fin Si
 
@@ -60,7 +60,7 @@ document.getElementById("characterName").textContent = character.getName();
 document.getElementById("characterLife").textContent = "Vida: "+character.getLife();
 //Images
 var img = document.createElement("img");
-img.src = "/images/"+characterJob+".png";
+img.src = "../images/"+characterJob+".png";
 var src = document.getElementById("characterImage");
 src.appendChild(img);
 
@@ -236,22 +236,22 @@ function getDiceImg(diceValue){
     var nameImg;
     switch(diceValue){
         case 1:
-            nameImg="/images/dice1.png";
+            nameImg="../images/dice1.png";
             break;
         case 2:
-            nameImg="/images/dice2.png";
+            nameImg="../images/dice2.png";
             break;
         case 3:
-            nameImg="/images/dice3.png";
+            nameImg="../images/dice3.png";
             break;
         case 4:
-            nameImg="/images/dice4.png";
+            nameImg="../images/dice4.png";
             break;
         case 5:
-            nameImg="/images/dice5.png";
+            nameImg="../images/dice5.png";
             break;
         case 6:
-            nameImg="/images/dice6.png";
+            nameImg="../images/dice6.png";
         break;    
     }
     return nameImg;

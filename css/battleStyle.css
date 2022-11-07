@@ -22,7 +22,7 @@ body{
 	color: white;
 	word-wrap:break-word;
 	text-align: center;
-  background-image: url(/images/dungeon.jpg);
+  background-image: url(../images/dungeon.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
 }
