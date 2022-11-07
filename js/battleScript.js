@@ -2,6 +2,7 @@
 //Date: 4/11/2022
 //Videojuego
 
+
 //Create Music
 //Battle music 
 if(document.getElementById("finalBattle") == null){
@@ -123,6 +124,16 @@ function rollDice(){
 }//Fin rollDice
 
 
+
+/*
+//Animation Attack
+    $("#characterImage").animate({
+        left: '10px'
+
+    });
+*/
+
+
 function attack(){
         //Import roll from Storage
         var diceSaved = sessionStorage.getItem('diceSaved');
@@ -133,6 +144,7 @@ function attack(){
 
         //Character Attack
         if (enemy.getLife() > 0){
+            
             if (characterDice >=2 && characterDice <= 4){
                 enemy.setLife(enemy.getLife()-character.getAttack());
             }else if (characterDice == 1){
