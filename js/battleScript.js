@@ -2,7 +2,6 @@
 //Date: 4/11/2022
 //Videojuego
 
-
 //Create Music
 //Battle music 
 if(document.getElementById("finalBattle") == null){
