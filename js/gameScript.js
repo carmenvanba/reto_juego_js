@@ -27,7 +27,6 @@ if(document.getElementById("finale") != null){
 }//Fin Si
 
    
-
 //If exits, hide the elements
 if(document.getElementById("formulary") != null){
     //Play menu music
