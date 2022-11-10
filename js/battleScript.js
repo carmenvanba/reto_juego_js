@@ -124,14 +124,6 @@ function rollDice(){
 
 
 
-/*
-//Animation Attack
-    $("#characterImage").animate({
-        left: '10px'
-
-    });
-*/
-
 
 function attack(){
         //Import roll from Storage
